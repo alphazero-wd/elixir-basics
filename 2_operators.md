@@ -10,7 +10,7 @@ We have seen arthimetical operations (`+`, `-`, `*`, `/`) in the [first section]
 
 These operators are expected to be evaluated to booleans as their arguments.
 
-#### **and, or, not**
+#### **`and`, `or`, `not`**
 
 `and` operator will be evaluated to `true` if **all** of the conditions within an expression satisfy.
 
@@ -82,7 +82,7 @@ not false
 true
 ```
 
-#### **&&, ||, !**
+#### **`&&`, `||`, `!`**
 
 `&&`, `||` and `!` are equivalent to `and`, `or` and `not` respectively. However, these operators can accept any type of arguments. Everything except for `nil` or `false` gets evaluated to `true`.
 
@@ -290,7 +290,7 @@ false
 false
 ```
 
-The greater than (or equal) operator (`>`, `>=`) is used to check if the number before the operator is **greater than** (or equal to) the number after the operator.
+The greater than operator (`>`) is used to check if an element on the left side is **greater than** an element on the right side.
 
 ```exs
 11 > 1
@@ -308,6 +308,8 @@ true
 false
 ```
 
+The greater than or equal operator (`>=`) is used to check if an element on the left side is **greater than or equal** to an element on the right side.
+
 ```exs
 11 >= 11
 ```
@@ -324,7 +326,7 @@ true
 false
 ```
 
-The less than (or equal) operator (`<`, `<=`) is used to check if the number before the operator is **less than** (or equal to) the number after the operator.
+The less than operator (`<`) is used to check if an element on the left side is **less than** an element on the right side.
 
 ```exs
 11 < 1
@@ -342,6 +344,8 @@ false
 true
 ```
 
+The less than or equal operator (`<=`) is used to check if an element on the left side is **less than or equal** to an element on the right side.
+
 ```exs
 11 <= 1
 ```
@@ -356,4 +360,40 @@ false
 
 ```
 true
+```
+
+### **Membership Operators**
+
+Membership Operators check if an element on the left side is inside a collection of elements on the right.
+
+```exs
+1 in [1, 2, 3]
+```
+
+```
+true
+```
+
+```exs
+0 in [1, 2, 3]
+```
+
+```
+false
+```
+
+```exs
+8 not in [1, 2, 3]
+```
+
+```
+true
+```
+
+```exs
+3 not in [1, 2, 3]
+```
+
+```
+false
 ```

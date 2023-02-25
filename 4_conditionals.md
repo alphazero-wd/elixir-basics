@@ -49,7 +49,7 @@ unless color != "blue", do: "yes"
 "yes"
 ```
 
-`else` executes the code block within if the specified condition `if` or `unless` does not satisfy.
+`else` executes the code block within after all the conditions in `if` or `unless` statements fail to satisfy.
 
 ```exs
 color = "red"

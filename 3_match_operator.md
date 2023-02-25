@@ -143,7 +143,6 @@ a
 If pattern matching is executed between two tuples of different sizes, an error is thrown.
 
 ```exs
-"""The left side wants to match against 3 values on the right side, but there are only 2 values there, which is invalid."""
 {a, b, _} = {"a", "b"}
 ```
 

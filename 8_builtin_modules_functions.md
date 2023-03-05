@@ -416,3 +416,139 @@ Enum.uniq([1, 1, 1, 2, 2, 3, 3])
 ```
 
 There are plenty of other useful built-in functions in the `Enum` module that are worth researching in the docs [here](https://hexdocs.pm/elixir/1.12/Enum.html).
+
+## **`Kernel`**
+
+When calling a function from the `Kernel` module, we are allowed to call the function without mentioning the `Kernel` module itself.
+
+`length/1` function takes in a collection and returns the length i.e. the number of elements in it.
+
+```exs
+Kernel.length([1, 2, 3])
+length([1, 2, 3]) # omit the module's name
+```
+
+```
+3
+3
+```
+
+`hd/1` function takes in a list and returns the head of it i.e. the first element.
+
+```exs
+hd([1, 2, 3, 4])
+```
+
+```
+1
+```
+
+> An error is thrown if the given list is empty.
+
+```exs
+hd([])
+```
+
+```
+** (ArgumentError) errors were found at the given arguments:
+  * 1st argument: not a nonempty list
+    :erlang.hd([])
+```
+
+`tl/1` function takes in a list and returns the tail of it i.e. all elements after the first one.
+
+```exs
+tl([1, 2, 3, 4])
+```
+
+```
+[2, 3, 4]
+```
+
+> Similarly, an error is thrown if the given list is empty.
+
+```exs
+tl([])
+```
+
+```
+** (ArgumentError) errors were found at the given arguments:
+  * 1st argument: not a nonempty list
+    :erlang.tl([])
+```
+
+The following functions take in a variable `term` of any type.
+
+`is_nil/1`: check `term` is `nil`.
+
+`is_map/1`: check `term` is a map.
+
+`is_function/1`: check `term` is a function.
+
+`is_list/1`: check `term` is a list.
+
+`is_integer/1`: check `term` is an integer.
+
+`is_number/1`: check `term` is a number.
+
+`is_atom/1`: check `term` is an atom.
+
+`is_boolean/1`: check `term` is a boolean.
+
+`is_float/1`: check `term` is a float.
+
+`is_bitstring/1`: check `term` is a string.
+
+`to_string/1`: convert `term` to the string version.
+
+### **Some useful maths functions**
+
+`trunc/1` function takes in a number and returns the integer part of it.
+
+```exs
+trunc(1.97)
+```
+
+```
+1
+```
+
+`div/2` function takes in a dividend `a`, a divisor `b` (`b` is different from 0) and performs an integer division `a / b`.
+
+```exs
+div(40, 6)
+```
+
+```
+6
+```
+
+`rem/2` function takes in a dividend `a`, a divisor `b` (`b` is different from 0) and returns the remainder of the division `a / b`.
+
+```exs
+rem(10, 6)
+```
+
+```
+4
+```
+
+`floor/2` function takes in a number and rounds it down (similar to `trunc/1`).
+
+```exs
+floor(1.79)
+```
+
+```
+1
+```
+
+`ceil/2` function takes in a number and rounds it up.
+
+```exs
+ceil(1.3)
+```
+
+```
+2
+```

@@ -45,7 +45,7 @@ true or false
 ```
 
 ```
-truw
+true
 ```
 
 ```exs

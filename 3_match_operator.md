@@ -147,5 +147,5 @@ If pattern matching is executed between two tuples of different sizes, an error 
 ```
 
 ```
-** (MatchError) no match of right hand side value: {"a", "b"
+** (MatchError) no match of right hand side value: {"a", "b"}
 ```

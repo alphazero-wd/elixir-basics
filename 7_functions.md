@@ -106,7 +106,7 @@ Math.div(8, 0)
 "Cannot divide by 0"
 ```
 
-Like attern matching functions, we need to specify the default case where the arguments passed into the function do not satisfy any conditions. Otherwise, an error is thrown.
+Like pattern matching functions, we need to specify the default case where the arguments passed into the function do not satisfy any conditions. Otherwise, an error is thrown.
 
 ```exs
 defmodule Math do
